@@ -18,28 +18,14 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 function Header(props) {
     return (
     <>
-      <Navbar>
-    <Container>
 
-
-        <Navbar.Brand>
-         <img src={props.image} />
-        </Navbar.Brand>
-
-           <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-         
-          </Form>
-       
-
-
-
-    <nav class="navbar ms-auto">
+<Navbar bg="" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home"><img src={props.image} /></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="">
+          <nav class="navbar ms-auto">
     <div class = "nav-items">
 
 
@@ -85,7 +71,23 @@ function Header(props) {
 
 </div>
 </nav>
+           
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+      <Navbar>
+    <Container>
 
+
+      
+       
+
+
+
+
+
+  
      
         </Container>
       </Navbar>

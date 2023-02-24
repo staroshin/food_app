@@ -34,7 +34,7 @@
 }
 
 
-    
+
 
 .navbar
 {
@@ -63,7 +63,12 @@ a.active.active {
 }
 
 
-
+@media (min-width:448px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-direction: row-reverse 
+  }
+}
 
 
 

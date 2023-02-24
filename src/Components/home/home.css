@@ -436,3 +436,9 @@ svg.svg-inline--fa.fa-instagram:hover{
 .opinion h4{
 	font-weight: bold;
 }
+
+@media (min-width:320px) and (max-width: 768px) {
+	#home {
+		padding: 6rem 1rem !important;
+	}
+}
