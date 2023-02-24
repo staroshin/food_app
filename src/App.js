@@ -1,12 +1,26 @@
 import React from 'react';
 
-import logo from './logo.svg';
+
 import './App.css';
-import Home from'./home';
-import Gallery from'./gallery';
-import Navbar from './Navbar.js'
-import BasicExample from './BasicExample.js'
+import Home from'./Components/home/home.js';
+import Menu from'./Components/menu.js';
+import About from'./Components/about/about.js';
+import Header from './Components/header/Header.js'
+
+import Welcome from './Components/Welcome.js'
+
+import Offers from './Components/Offers.js'
+import Restaurant from './Components/Restaurants.js'
+import Careers from './Components/Careers.js'
+import Rewards from './Components/Rewards.js'
+
+
+import Footer from './Components/footer/Footer.js'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import image from "./img/fp_logo.png";
+
 import { 
     BrowserRouter as Router, 
     Route, 
@@ -20,12 +34,30 @@ function App() {
   return (
 
   <Router> 
-          <Navbar />
+
+        
+          <Header image={image}/>
+     
+          
           
            <Routes>            
             <Route exact path="/" element={<Home/>}/>
-            <Route path="/gallery" element={<Gallery/>}/>          
+            <Route path="/menu" element={<Menu />}/>
+
+            <Route path="/offers" element={<Offers />}/>
+            <Route path="/restaurant" element={<Restaurant />}/>
+            <Route path="/careers" element={<Careers />}/>
+            <Route path="/reward" element={<Rewards />}/>
+
+            <Route path="/about" element={<About/>}/>       
            </Routes>
+
+
+
+          <Footer />
+
+          
+          <Welcome name="FUDO."/>
 
   </Router> 
 
