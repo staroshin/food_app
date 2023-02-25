@@ -14,7 +14,7 @@ import Restaurant from './Components/Restaurants.js'
 import Careers from './Components/Careers.js'
 import Rewards from './Components/Rewards.js'
 
-
+import FoodDetails from './Components/home/sections/FoodDetails.js'
 import Footer from './Components/footer/Footer.js'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -49,7 +49,8 @@ function App() {
             <Route path="/careers" element={<Careers />}/>
             <Route path="/reward" element={<Rewards />}/>
 
-            <Route path="/about" element={<About/>}/>       
+            <Route path="/about" element={<About/>}/>  
+             <Route path="/fooddetails/:id" element={<FoodDetails/>}/>       
            </Routes>
 
 

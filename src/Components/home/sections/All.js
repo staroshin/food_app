@@ -4,6 +4,8 @@ import React from 'react';
 import {useState} from "react";
 import {useEffect} from "react";
 
+import {Link} from "react-router-dom"
+
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -110,11 +112,20 @@ useEffect(() => {
 
                   {items.map(item => ( 
                      <Col md="4">
-                      <Card className="mb-4">
+                      <Card className="mb-4 ">
                          
                         <Card.Body>
                           <Card.Img className="img-fluid" src={item.img} />
-                            <Card.Title>{item.name}</Card.Title>
+
+
+                          <Link to={`/fooddetails/${item.id}`}>
+  
+                            <Card.Title  className="slider_card">{item.name}</Card.Title>
+
+
+                              </Link>
+
+
                             <Card.Text className="d-flex "><p className="old_price">$15.99</p><p className="new_price">{item.price}</p></Card.Text>
                             <div className="d-flex ">
                             <div><StarRating/></div>
@@ -122,13 +133,7 @@ useEffect(() => {
                             <p>30 mins</p></div>
                             </div>
 
-                              <div className="d-flex justify-content-center">
-                            
-                           
-                            <Button onClick={() => setCount(count - 1)} className="btn2">-</Button>
-                             <h5 className="order text-center">{count}</h5>
-                            <Button onClick={() => setCount(count + 1)} className="btn2">+</Button> 
-                            </div>  
+                             
 
                         </Card.Body>
                       

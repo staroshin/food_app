@@ -45,10 +45,10 @@
    
 }
 
-.card-title.h5 {
+.slider_card.card-title.h5 {
 
-   font-weight: 600;
-    color: #141414;
+   font-weight: 600!important;
+    color: #141414!important;
 
     margin-top: 10px;
 }
