@@ -31,7 +31,7 @@ function FoodDetails() {
        useEffect(() => {
 
              const getFood = async () => {
-              const result = await fetch(`https://free-food-menus-api-production.up.railway.app/best-foods/${params.id}`);
+              const result = await fetch(`https://bobsburgers-api.herokuapp.com/characters/${params.id}`);
              
              const data = await result.json();
 
@@ -55,7 +55,7 @@ function FoodDetails() {
       
                <Col md="6">
                       <Card>
-                          <Card.Img className="img-fluid " src={food.img} />
+                          <Card.Img className="img-fluid " src={food.image} />
                         
                      </Card>
 
@@ -71,7 +71,7 @@ function FoodDetails() {
                         
                             
                            
-                             <Card.Title className="one_food_title"><h1>${food.price}</h1></Card.Title>
+                             <Card.Title className="one_food_title"><h1>${food.name}</h1></Card.Title>
                              
                         
                              <Card.Title> <h2>{food.name}</h2></Card.Title>

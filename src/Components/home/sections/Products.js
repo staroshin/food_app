@@ -58,7 +58,7 @@ const [error, setError] = useState(null);
   const [items, setItems] = useState([]);
 
 useEffect(() => {
-   fetch('https://free-food-menus-api-production.up.railway.app/drinks?_limit=8')
+   fetch('https://bobsburgers-api.herokuapp.com/characters')
       .then(res => res.json())
       .then(
         (result) => {
@@ -87,7 +87,7 @@ useEffect(() => {
         className="mySwiper"
         slidesPerView={3.5}
         spaceBetween={60}
-        className="p-3"
+     
         >
 
         {items.map(item => ( 
@@ -97,9 +97,9 @@ useEffect(() => {
                         <Card className="mb-4">
                            
                           <Card.Body>
-                            <Card.Img className="img-fluid" src={item.img} />
+                            <Card.Img className="img-fluid" src={item.image} />
                               <Card.Title>{item.name}</Card.Title>
-                              <Card.Text className="d-flex "><p className="old_price">$15.99</p><p className="new_price">{item.price}</p></Card.Text>
+                              <Card.Text className="d-flex "><p className="old_price">$15.99</p><p className="new_price">{item.name}</p></Card.Text>
                               <div className="d-flex ">
                               <div><StarRating/></div>
                               <div  className="time_text d-flex justify-content-end"><FontAwesomeIcon icon={faClock} className="icon_des"  ></FontAwesomeIcon>
