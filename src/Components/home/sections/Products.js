@@ -58,7 +58,7 @@ const [error, setError] = useState(null);
   const [items, setItems] = useState([]);
 
 useEffect(() => {
-   fetch('https://bobsburgers-api.herokuapp.com/characters')
+   fetch('https://free-food-menus-api-production.up.railway.app/desserts')
       .then(res => res.json())
       .then(
         (result) => {

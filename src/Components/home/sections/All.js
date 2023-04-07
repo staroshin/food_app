@@ -69,7 +69,7 @@ const [error, setError] = useState(null);
   const [items, setItems] = useState([]);
 
 useEffect(() => {
-  fetch('https://bobsburgers-api.herokuapp.com/characters/?limit=3')
+  fetch('https://free-food-menus-api-production.up.railway.app/best-foods')
       .then(res => res.json())
       .then(
         (result) => {
@@ -115,7 +115,7 @@ useEffect(() => {
                       <Card className="mb-4 ">
                          
                         <Card.Body>
-                          <Card.Img className="img-fluid" src={item.image} />
+                          <Card.Img className="img-fluid" src={item.img} />
 
 
                           <Link to={`/fooddetails/${item.id}`}>
